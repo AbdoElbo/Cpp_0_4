@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 16:54:47 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/02/25 16:56:06 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/02/25 17:30:49 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ class Contact
 		std::string	NickName;
 		std::string	PhoneNumber;
 		std::string	DarkestSecret;
+	private:
 };
 
 class PhoneBook
 {
 	public:
-		Contact contact[8];
+		Contact contact[3];
 	private:
-
 };
 
 #endif
