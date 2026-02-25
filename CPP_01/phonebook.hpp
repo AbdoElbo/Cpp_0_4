@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 16:54:47 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/02/25 17:30:49 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/02/25 17:47:59 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Contact
 class PhoneBook
 {
 	public:
-		Contact contact[3];
+		Contact contact[8];
 	private:
 };
 

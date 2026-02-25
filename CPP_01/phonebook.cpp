@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 16:07:05 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/02/25 17:44:35 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/02/25 18:11:25 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,21 @@ void	add_option(PhoneBook *phonebook, int i)
 	std::string phone;
 	std::string darkest;
 
-	std::cout<<"Please enter the first name: ";
+	std::cout<<"Enter the first name: ";
 	std::cin >> firstname;
-	std::cout<<"Please enter the last name: ";
+	std::cout<<"Enter the last name: ";
 	std::cin >> lastname;
-	std::cout<<"Please enter the nick_name: ";
+	std::cout<<"Enter the nick_name: ";
 	std::cin >> nick;
-	std::cout<<"Please enter the phone number: ";
+	std::cout<<"Enter the phone number: ";
 	std::cin >> phone;
-	std::cout<<"Please enter the darkest secret: ";
+	std::cout<<"Enter the darkest secret: ";
 	std::cin >> darkest;
 
 	if (!firstname.length() || !lastname.length() ||
 		!nick.length() || !phone.length() || !darkest.length())
 		return ;
+	phonebook->contact[i].Index = i;
 	phonebook->contact[i].FirstName = firstname;
 	phonebook->contact[i].LastName = lastname;
 	phonebook->contact[i].NickName = nick;
@@ -44,10 +45,23 @@ void	add_option(PhoneBook *phonebook, int i)
 	phonebook->contact[i].DarkestSecret = darkest;
 }
 
-// void	search_option(PhoneBook phonebook)
-// {
-
-// }
+void	search_option(PhoneBook *phonebook)
+{
+	std::cout<<"|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾|\n";
+	std::cout<<"|     index| firstname|  lastname| nickname|\n";
+	std::cout<<"|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾|\n";
+	for (int i = 0; i < 8; ++i)
+	{
+		std::cout<< "|         " << phonebook->contact[i].Index;
+		std::cout<< "|       " << phonebook->contact[i].FirstName;
+		std::cout<< "|       " << phonebook->contact[i].LastName;
+		std::cout<< "|       " << phonebook->contact[i].NickName << "|\n" ;
+		if (i != 7)
+			std::cout<<"|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾|\n";
+		else
+			std::cout<<"‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n";
+	}
+}
 
 
 int main(void)
@@ -68,7 +82,7 @@ int main(void)
 		if (!identifer.compare("ADD") || !identifer.compare("add"))
 			add_option(&phonebook, i);
 		else if (!identifer.compare("SEARCH") || !identifer.compare("search"))
-			std::cout<<"Your word is SEARCH\n";
+			search_option(&phonebook);
 		else if (!identifer.compare("EXIT") || !identifer.compare("exit"))
 			break ;
 		if (i < 7)
