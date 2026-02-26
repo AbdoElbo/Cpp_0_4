@@ -6,19 +6,19 @@
 #    By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/07 16:20:34 by aelbouaz          #+#    #+#              #
-#    Updated: 2026/02/25 15:51:39 by aelbouaz         ###   ########.fr        #
+#    Updated: 2026/02/26 19:46:26 by aelbouaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = phonebook.cpp
+SRCS = phonebook.cpp getters.cpp setters.cpp
 
 OBJ_DIR = obj
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
 
-NAME = megaphone
+NAME = phonebook
 
 all: $(NAME)
 

@@ -1,26 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   setters.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/25 16:54:47 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/02/26 19:31:31 by aelbouaz         ###   ########.fr       */
+/*   Created: 2026/02/26 19:33:04 by aelbouaz          #+#    #+#             */
+/*   Updated: 2026/02/26 19:38:53 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
-
 #include "contact.hpp"
 
-class PhoneBook
+void	Contact::set_index(int number)
 {
-	public:
-		Contact contact[MAX_CON];
-	private:
-		// static const int max_con {8};
-};
+	Index = number;
+}
 
-#endif
+void	Contact::set_first_n(std::string str)
+{
+	FirstName = str;
+}
+
+void	Contact::set_last_n(std::string str)
+{
+	LastName = str;
+}
+
+void	Contact::set_nick_n(std::string str)
+{
+	NickName = str;
+}
+
+void	Contact::set_phone(std::string str)
+{
+	PhoneNumber = str;
+}
+
+void	Contact::set_secret(std::string str)
+{
+	DarkestSecret = str;
+}

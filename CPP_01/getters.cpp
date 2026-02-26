@@ -1,26 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   getters.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/25 16:54:47 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/02/26 19:31:31 by aelbouaz         ###   ########.fr       */
+/*   Created: 2026/02/26 19:21:51 by aelbouaz          #+#    #+#             */
+/*   Updated: 2026/02/26 19:37:43 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
-
 #include "contact.hpp"
 
-class PhoneBook
+int	Contact::get_index(void)
 {
-	public:
-		Contact contact[MAX_CON];
-	private:
-		// static const int max_con {8};
-};
+	return (Index);
+}
 
-#endif
+std::string	Contact::get_first_n(void)
+{
+	return (FirstName);
+}
+
+std::string	Contact::get_last_n(void)
+{
+	return (LastName);
+}
+
+std::string	Contact::get_nick_n(void)
+{
+	return (NickName);
+}
+
+std::string	Contact::get_phone(void)
+{
+	return (PhoneNumber);
+}
+
+std::string	Contact::get_secret(void)
+{
+	return (DarkestSecret);
+}

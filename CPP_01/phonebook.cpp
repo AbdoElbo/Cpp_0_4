@@ -6,13 +6,10 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 16:07:05 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/02/25 19:30:38 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/02/26 19:51:27 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <iomanip>
-#include <string>
 #include "phonebook.hpp"
 
 void	add_option(PhoneBook *phonebook, int i)
@@ -37,12 +34,12 @@ void	add_option(PhoneBook *phonebook, int i)
 	if (!firstname.length() || !lastname.length() ||
 		!nick.length() || !phone.length() || !darkest.length())
 		return ;
-	phonebook->contact[i].Index = i;
-	phonebook->contact[i].FirstName = firstname;
-	phonebook->contact[i].LastName = lastname;
-	phonebook->contact[i].NickName = nick;
-	phonebook->contact[i].PhoneNumber = phone;
-	phonebook->contact[i].DarkestSecret = darkest;
+	phonebook->contact[i].set_index(i);
+	phonebook->contact[i].set_first_n(firstname);
+	phonebook->contact[i].set_last_n(lastname);
+	phonebook->contact[i].set_nick_n(nick);
+	phonebook->contact[i].set_phone(phone);
+	phonebook->contact[i].set_secret(darkest);
 }
 
 void	print_row(std::string str)
@@ -69,14 +66,14 @@ void	search_option(PhoneBook *phonebook)
 	std::cout<<"|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|\n";
 	std::cout<<"|     index| firstname|  lastname|  nickname|\n";
 	std::cout<<"|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|\n";
-	for (int i = 0; i < 8; i++)
+	for (int i = 0; i < MAX_CON; i++)
 	{
-		std::cout<< "|         " << phonebook->contact[i].Index;
-		print_row(phonebook->contact[i].FirstName);
-		print_row(phonebook->contact[i].LastName);
-		print_row(phonebook->contact[i].NickName);
+		std::cout<< "|         " << phonebook->contact[i].get_index();
+		print_row(phonebook->contact[i].get_first_n());
+		print_row(phonebook->contact[i].get_last_n());
+		print_row(phonebook->contact[i].get_nick_n());
 		std::cout<<"|\n";
-		if (i != 7)
+		if (i != MAX_CON - 1)
 			std::cout<<"|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|\n";
 		else
 			std::cout<<"‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n";
@@ -95,8 +92,8 @@ int main(void)
 	std::cout<<"| |_) | '_ \\ / _ \\|  _ \\ / _ \\ |_ \\ / _ \\ / _ \\| |/ /\n";
 	std::cout<<"|  __/| | | | (_) | | | |  __/ |_) | (_) | (_) |   <\n";
 	std::cout<<"|_|   |_| |_|\\___/|_| |_|\\___|_.__/ \\___/ \\___/|_|\\_\\ \n\n";
-	for (int k = 0; k < 8; ++k)
-		phonebook.contact[k].Index = k;
+	for (int k = 0; k < MAX_CON; ++k)
+		phonebook.contact[k].set_index(k);
 	while (1)
 	{
 		std::cout<<"Please enter one of the options: ADD/SEARCH/EXIT\n";
@@ -104,8 +101,10 @@ int main(void)
 		if (!identifer.compare("ADD") || !identifer.compare("add"))
 		{
 			add_option(&phonebook, i);
-			if (i < 8)
+			if (i < MAX_CON - 1)
 				i++;
+			else
+				i = 0;
 		}
 		else if (!identifer.compare("SEARCH") || !identifer.compare("search"))
 			search_option(&phonebook);
