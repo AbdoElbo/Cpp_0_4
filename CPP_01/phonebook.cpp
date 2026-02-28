@@ -34,12 +34,12 @@ void	add_option(PhoneBook *phonebook, int i)
 	if (!firstname.length() || !lastname.length() ||
 		!nick.length() || !phone.length() || !darkest.length())
 		return ;
-	phonebook->contact[i].set_index(i);
-	phonebook->contact[i].set_first_n(firstname);
-	phonebook->contact[i].set_last_n(lastname);
-	phonebook->contact[i].set_nick_n(nick);
-	phonebook->contact[i].set_phone(phone);
-	phonebook->contact[i].set_secret(darkest);
+	phonebook->contact[i].SetIndex(i);
+	phonebook->contact[i].SetFirst(firstname);
+	phonebook->contact[i].SetLast(lastname);
+	phonebook->contact[i].SetNick(nick);
+	phonebook->contact[i].SetPhone(phone);
+	phonebook->contact[i].SetSecret(darkest);
 }
 
 void	print_row(std::string str)
@@ -63,21 +63,41 @@ void	print_row(std::string str)
 
 void	search_option(PhoneBook *phonebook)
 {
+	int	input;
+
 	std::cout<<"|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|\n";
-	std::cout<<"|     index| firstname|  lastname|  nickname|\n";
+	std::cout<<"|     Index| Firstname|  Lastname|  Nickname|\n";
 	std::cout<<"|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|\n";
 	for (int i = 0; i < MAX_CON; i++)
 	{
-		std::cout<< "|         " << phonebook->contact[i].get_index();
-		print_row(phonebook->contact[i].get_first_n());
-		print_row(phonebook->contact[i].get_last_n());
-		print_row(phonebook->contact[i].get_nick_n());
+		std::cout<< "|         " << phonebook->contact[i].GetIndex();
+		print_row(phonebook->contact[i].GetFirst());
+		print_row(phonebook->contact[i].GetLast());
+		print_row(phonebook->contact[i].GetNick());
 		std::cout<<"|\n";
 		if (i != MAX_CON - 1)
 			std::cout<<"|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|\n";
 		else
 			std::cout<<"‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n";
 	}
+	std::cout<<"Enter the person's Index: ";
+	std::cin >> input;
+	if (input < 0 || input > MAX_CON)
+	{
+		std::cout<<"\nmf that's an Invalid index.\n\n";
+		return ;
+	}
+	if (phonebook->contact[input].GetFirst().size() == 0)
+	{
+		std::cout<<"\nmf, it's an empty index.\n\n";
+		return ;
+	}
+	std::cout <<"Firstname: " << phonebook->contact[input].GetFirst() << "\n";
+	std::cout <<"Lastname: " << phonebook->contact[input].GetLast() << "\n";
+	std::cout <<"Nickname: " << phonebook->contact[input].GetNick() << "\n";
+	std::cout <<"Phone number: " << phonebook->contact[input].GetPhone() << "\n";
+	std::cout <<"Darkest Secret: " << phonebook->contact[input].GetSecret() << "\n\n";
+	
 }
 
 
@@ -93,7 +113,7 @@ int main(void)
 	std::cout<<"|  __/| | | | (_) | | | |  __/ |_) | (_) | (_) |   <\n";
 	std::cout<<"|_|   |_| |_|\\___/|_| |_|\\___|_.__/ \\___/ \\___/|_|\\_\\ \n\n";
 	for (int k = 0; k < MAX_CON; ++k)
-		phonebook.contact[k].set_index(k);
+		phonebook.contact[k].SetIndex(k);
 	while (1)
 	{
 		std::cout<<"Please enter one of the options: ADD/SEARCH/EXIT\n";

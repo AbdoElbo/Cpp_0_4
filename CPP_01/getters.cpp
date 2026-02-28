@@ -12,32 +12,32 @@
 
 #include "contact.hpp"
 
-int	Contact::get_index(void)
+int	Contact::GetIndex(void) const 
 {
 	return (Index);
 }
 
-std::string	Contact::get_first_n(void)
+std::string	Contact::GetFirst(void) const
 {
 	return (FirstName);
 }
 
-std::string	Contact::get_last_n(void)
+std::string	Contact::GetLast(void) const
 {
 	return (LastName);
 }
 
-std::string	Contact::get_nick_n(void)
+std::string	Contact::GetNick(void) const
 {
 	return (NickName);
 }
 
-std::string	Contact::get_phone(void)
+std::string	Contact::GetPhone(void) const
 {
 	return (PhoneNumber);
 }
 
-std::string	Contact::get_secret(void)
+std::string	Contact::GetSecret(void) const
 {
 	return (DarkestSecret);
 }
