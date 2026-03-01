@@ -21,12 +21,12 @@ class Contact
 		std::string	PhoneNumber;
 		std::string	DarkestSecret;
 	public:
-		int			GetIndex(void) const;
-		std::string	GetFirst(void) const;
-		std::string	GetLast(void) const;
-		std::string	GetNick(void) const;
-		std::string	GetPhone(void) const;
-		std::string	GetSecret(void) const;
+		int			GetIndex(void);
+		std::string	GetFirst(void);
+		std::string	GetLast(void);
+		std::string	GetNick(void);
+		std::string	GetPhone(void);
+		std::string	GetSecret(void);
 		void		SetIndex(int number);
 		void		SetFirst(std::string str);
 		void		SetLast(std::string str);

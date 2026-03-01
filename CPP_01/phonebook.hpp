@@ -6,7 +6,7 @@
 /*   By: gekko <gekko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 16:54:47 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/02/28 23:29:45 by gekko            ###   ########.fr       */
+/*   Updated: 2026/03/01 05:15:36 by gekko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class PhoneBook
 		// static const int max_con {8};
 };
 
-void	print_row(std::string str);
-void	search_option(PhoneBook *phonebook);
-void	add_option(PhoneBook *phonebook, int i);
+void	PrintRow(std::string str);
+void	SearchOption(PhoneBook *phonebook);
+void	AddOption(PhoneBook *phonebook, int i);
 
 #endif

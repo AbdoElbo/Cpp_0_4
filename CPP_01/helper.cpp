@@ -6,13 +6,13 @@
 /*   By: gekko <gekko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 23:24:39 by gekko             #+#    #+#             */
-/*   Updated: 2026/02/28 23:29:31 by gekko            ###   ########.fr       */
+/*   Updated: 2026/03/01 05:15:22 by gekko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
 
-void	add_option(PhoneBook *phonebook, int i)
+void	AddOption(PhoneBook *phonebook, int i)
 {
 	std::string firstname;
 	std::string lastname;
@@ -42,7 +42,7 @@ void	add_option(PhoneBook *phonebook, int i)
 	phonebook->contact[i].SetSecret(darkest);
 }
 
-void	print_row(std::string str)
+void	PrintRow(std::string str)
 {
 	int	diff = 10 - str.length();
     
@@ -61,7 +61,7 @@ void	print_row(std::string str)
 	}
 }
 
-void	search_option(PhoneBook *phonebook)
+void	SearchOption(PhoneBook *phonebook)
 {
 	int	input;
 
@@ -82,7 +82,14 @@ void	search_option(PhoneBook *phonebook)
 	}
 	std::cout<<"Enter the person's Index: ";
 	std::cin >> input;
-	if (input < 0 || input > MAX_CON)
+	if (std::cin.fail())
+	{
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
+		std::cout << "Invalid input, Only Numeric.\n";
+		return ;
+	}
+	if (input < 0 || input >= MAX_CON)
 	{
 		std::cout<<"\nmf that's an Invalid index.\n\n";
 		return ;
@@ -97,5 +104,6 @@ void	search_option(PhoneBook *phonebook)
 	std::cout <<"Nickname: " << phonebook->contact[input].GetNick() << "\n";
 	std::cout <<"Phone number: " << phonebook->contact[input].GetPhone() << "\n";
 	std::cout <<"Darkest Secret: " << phonebook->contact[input].GetSecret() << "\n\n";
-	
+	std::cin.clear();
+	std::cin.ignore(10000, '\n');
 }

@@ -6,7 +6,7 @@
 /*   By: gekko <gekko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 16:07:05 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/02/28 23:25:12 by gekko            ###   ########.fr       */
+/*   Updated: 2026/03/01 05:15:00 by gekko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,17 @@ int main(void)
 	{
 		std::cout<<"Please enter one of the options: ADD/SEARCH/EXIT\n";
 		std::cin >> identifer;
-		if (!identifer.compare("ADD") || !identifer.compare("add"))
+		if (!identifer.compare("ADD") || !identifer.compare("a"))
 		{
-			add_option(&phonebook, i);
+			AddOption(&phonebook, i);
 			if (i < MAX_CON - 1)
 				i++;
 			else
 				i = 0;
 		}
-		else if (!identifer.compare("SEARCH") || !identifer.compare("search"))
-			search_option(&phonebook);
-		else if (!identifer.compare("EXIT") || !identifer.compare("exit"))
+		else if (!identifer.compare("SEARCH") || !identifer.compare("s"))
+			SearchOption(&phonebook);
+		else if (!identifer.compare("EXIT") || !identifer.compare("e"))
 			break ;
 	}
 	return (0);
