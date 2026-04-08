@@ -6,7 +6,7 @@
 /*   By: gekko <gekko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 23:24:39 by gekko             #+#    #+#             */
-/*   Updated: 2026/03/01 05:21:09 by gekko            ###   ########.fr       */
+/*   Updated: 2026/04/08 22:07:20 by gekko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ void	AddOption(PhoneBook *phonebook, int i)
 	std::string darkest;
 
 	std::cout<<"Enter the first name: ";
-	std::cin >> firstname;
+	std::getline(std::cin, firstname);
 	std::cout<<"Enter the last name: ";
-	std::cin >> lastname;
+	std::getline(std::cin, lastname);
 	std::cout<<"Enter the nick_name: ";
-	std::cin >> nick;
+	std::getline(std::cin, nick);
 	std::cout<<"Enter the phone number: ";
-	std::cin >> phone;
+	std::getline(std::cin, phone);
 	std::cout<<"Enter the darkest secret: ";
-	std::cin >> darkest;
+	std::getline(std::cin, darkest);
 
 	if (!firstname.length() || !lastname.length() ||
 		!nick.length() || !phone.length() || !darkest.length())
@@ -63,7 +63,8 @@ void	PrintRow(std::string str)
 
 void	SearchOption(PhoneBook *phonebook)
 {
-	int	input;
+	std::string	input;
+	int			num;
 
 	std::cout<<"|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|\n";
 	std::cout<<"|     Index| Firstname|  Lastname|  Nickname|\n";
@@ -81,16 +82,12 @@ void	SearchOption(PhoneBook *phonebook)
 			std::cout<<"‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n";
 	}
 	std::cout<<"Enter the person's Index: ";
-	std::cin >> input;
-	if (std::cin.fail())
+	std::getline(std::cin, input);
+	if (!input.isdigit())
 	{
-		std::cin.clear();
-		std::cin.ignore(10000, '\n');
 		std::cout << "Invalid input, Only Numeric.\n";
 		return ;
 	}
-	std::cin.clear();
-	std::cin.ignore(10000, '\n');
 	if (input < 0 || input >= MAX_CON)
 	{
 		std::cout<<"\nmf that's an Invalid index.\n\n";

@@ -6,7 +6,7 @@
 /*   By: gekko <gekko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 16:07:05 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/03/01 05:22:16 by gekko            ###   ########.fr       */
+/*   Updated: 2026/04/08 21:53:45 by gekko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main(void)
 	while (1)
 	{
 		std::cout<<"Please enter one of the options: ADD/SEARCH/EXIT\n";
-		std::cin >> identifer;
+		std::getline(std::cin, identifer);
 		if (!identifer.compare("ADD") || !identifer.compare("a"))
 		{
 			AddOption(&phonebook, i);
