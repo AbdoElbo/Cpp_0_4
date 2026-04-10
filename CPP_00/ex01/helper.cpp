@@ -6,7 +6,7 @@
 /*   By: gekko <gekko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 23:24:39 by gekko             #+#    #+#             */
-/*   Updated: 2026/04/08 22:07:20 by gekko            ###   ########.fr       */
+/*   Updated: 2026/04/11 00:18:06 by gekko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,20 @@ void	AddOption(PhoneBook *phonebook, int i)
 	std::string darkest;
 
 	std::cout<<"Enter the first name: ";
-	std::getline(std::cin, firstname);
+	if (!std::getline(std::cin, firstname))
+		return ;
 	std::cout<<"Enter the last name: ";
-	std::getline(std::cin, lastname);
+	if (!std::getline(std::cin, lastname))
+		return ;
 	std::cout<<"Enter the nick_name: ";
-	std::getline(std::cin, nick);
+	if (!std::getline(std::cin, nick))
+		return ;
 	std::cout<<"Enter the phone number: ";
-	std::getline(std::cin, phone);
+	if (!std::getline(std::cin, phone))
+		return ;
 	std::cout<<"Enter the darkest secret: ";
-	std::getline(std::cin, darkest);
+	if (!std::getline(std::cin, darkest))
+		return ;
 
 	if (!firstname.length() || !lastname.length() ||
 		!nick.length() || !phone.length() || !darkest.length())
@@ -61,10 +66,23 @@ void	PrintRow(std::string str)
 	}
 }
 
+bool	IsAllDigits(std::string input)
+{
+	int	lenght = input.size();
+
+	if (input.empty())
+    	return false;
+	for (int i = 0; i < lenght; i++)
+	{
+		if (!std::isdigit(static_cast<unsigned char>(input[i])))
+			return false;
+	}
+	return true;
+}
 void	SearchOption(PhoneBook *phonebook)
 {
-	std::string	input;
-	int			num;
+	std::string	input_str;
+	int			input_num;
 
 	std::cout<<"|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|\n";
 	std::cout<<"|     Index| Firstname|  Lastname|  Nickname|\n";
@@ -82,25 +100,27 @@ void	SearchOption(PhoneBook *phonebook)
 			std::cout<<"‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n";
 	}
 	std::cout<<"Enter the person's Index: ";
-	std::getline(std::cin, input);
-	if (!input.isdigit())
+	if (!std::getline(std::cin, input_str))
+		return ;
+	if (!IsAllDigits(input_str))
 	{
 		std::cout << "Invalid input, Only Numeric.\n";
 		return ;
 	}
-	if (input < 0 || input >= MAX_CON)
+	input_num = std::stoi(input_str);
+	if (input_num < 0 || input_num >= MAX_CON)
 	{
 		std::cout<<"\nmf that's an Invalid index.\n\n";
 		return ;
 	}
-	if (phonebook->contact[input].GetFirst().size() == 0)
+	if (phonebook->contact[input_num].GetFirst().size() == 0)
 	{
 		std::cout<<"\nmf, it's an empty index.\n\n";
 		return ;
 	}
-	std::cout <<"Firstname: " << phonebook->contact[input].GetFirst() << "\n";
-	std::cout <<"Lastname: " << phonebook->contact[input].GetLast() << "\n";
-	std::cout <<"Nickname: " << phonebook->contact[input].GetNick() << "\n";
-	std::cout <<"Phone number: " << phonebook->contact[input].GetPhone() << "\n";
-	std::cout <<"Darkest Secret: " << phonebook->contact[input].GetSecret() << "\n\n";
+	std::cout <<"Firstname: " << phonebook->contact[input_num].GetFirst() << "\n";
+	std::cout <<"Lastname: " << phonebook->contact[input_num].GetLast() << "\n";
+	std::cout <<"Nickname: " << phonebook->contact[input_num].GetNick() << "\n";
+	std::cout <<"Phone number: " << phonebook->contact[input_num].GetPhone() << "\n";
+	std::cout <<"Darkest Secret: " << phonebook->contact[input_num].GetSecret() << "\n\n";
 }

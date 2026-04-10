@@ -6,12 +6,12 @@
 #    By: gekko <gekko@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/07 16:20:34 by aelbouaz          #+#    #+#              #
-#    Updated: 2026/03/01 00:16:08 by gekko            ###   ########.fr        #
+#    Updated: 2026/04/11 00:14:00 by gekko            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CPP = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++11
 
 SRCS = phonebook.cpp getters.cpp setters.cpp helper.cpp
 

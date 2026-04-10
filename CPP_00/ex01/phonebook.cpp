@@ -6,7 +6,7 @@
 /*   By: gekko <gekko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 16:07:05 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/08 21:53:45 by gekko            ###   ########.fr       */
+/*   Updated: 2026/04/11 00:20:39 by gekko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,11 @@ int main(void)
 		phonebook.contact[k].SetIndex(k);
 	while (1)
 	{
+		if (std::cin.eof())
+			break ;
 		std::cout<<"Please enter one of the options: ADD/SEARCH/EXIT\n";
-		std::getline(std::cin, identifer);
+		if (!std::getline(std::cin, identifer))
+			break ;
 		if (!identifer.compare("ADD") || !identifer.compare("a"))
 		{
 			AddOption(&phonebook, i);

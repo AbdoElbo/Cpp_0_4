@@ -6,7 +6,7 @@
 /*   By: gekko <gekko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 16:54:47 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/03/01 05:15:36 by gekko            ###   ########.fr       */
+/*   Updated: 2026/04/10 21:31:56 by gekko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class PhoneBook
 
 void	PrintRow(std::string str);
 void	SearchOption(PhoneBook *phonebook);
+bool	IsAllDigits(std::string input);
 void	AddOption(PhoneBook *phonebook, int i);
 
 #endif
