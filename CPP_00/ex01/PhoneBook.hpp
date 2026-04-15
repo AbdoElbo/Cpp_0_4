@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gekko <gekko@student.42.fr>                +#+  +:+       +#+        */
+/*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 16:54:47 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/10 21:31:56 by gekko            ###   ########.fr       */
+/*   Updated: 2026/04/15 19:37:03 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
-#include "contact.hpp"
+#include "Contact.hpp"
 
 class PhoneBook
 {

@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gekko <gekko@student.42.fr>                +#+  +:+       +#+         #
+#    By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/07 16:20:34 by aelbouaz          #+#    #+#              #
-#    Updated: 2026/04/11 00:14:00 by gekko            ###   ########.fr        #
+#    Updated: 2026/04/15 19:36:18 by aelbouaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++11
 
-SRCS = phonebook.cpp getters.cpp setters.cpp helper.cpp
+SRCS = Phonebook.cpp Getters.cpp Setters.cpp Helper.cpp
 
 OBJ_DIR = obj
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
@@ -34,7 +34,7 @@ $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(OBJ_DIR)
 	@$(CPP) $(CPPFLAGS) -c $< -o $@
 	@printf "$(GREEN).$(RESET)"
-	
+
 
 clean:
 	@printf "$(BLUE)Cleaned up!$(RESET)\n"

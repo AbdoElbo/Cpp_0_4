@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   getters.cpp                                        :+:      :+:    :+:   */
+/*   Getters.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gekko <gekko@student.42.fr>                +#+  +:+       +#+        */
+/*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 19:21:51 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/03/01 00:18:02 by gekko            ###   ########.fr       */
+/*   Updated: 2026/04/15 19:36:28 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#include "Contact.hpp"
 
-int	Contact::GetIndex(void) 
+int	Contact::GetIndex(void)
 {
 	return (Index);
 }

@@ -6,11 +6,11 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 19:33:04 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/02/26 19:38:53 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/04/15 19:35:59 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#include "Contact.hpp"
 
 void	Contact::SetIndex(int number)
 {

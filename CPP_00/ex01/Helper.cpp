@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   helper.cpp                                         :+:      :+:    :+:   */
+/*   Helper.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gekko <gekko@student.42.fr>                +#+  +:+       +#+        */
+/*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 23:24:39 by gekko             #+#    #+#             */
-/*   Updated: 2026/04/11 00:18:06 by gekko            ###   ########.fr       */
+/*   Updated: 2026/04/15 19:40:05 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "PhoneBook.hpp"
 
 void	AddOption(PhoneBook *phonebook, int i)
 {
@@ -47,23 +47,28 @@ void	AddOption(PhoneBook *phonebook, int i)
 	phonebook->contact[i].SetSecret(darkest);
 }
 
+// void	PrintRow(std::string str)
+// {
+// 	int	diff = 10 - str.length();
+
+// 	std::cout << "|";
+// 	if (diff >= 0)
+// 	{
+// 		for(int i = diff; i > 0; --i)
+// 			std::cout<<" ";
+// 		std::cout<<str;
+// 	}
+// 	else if (diff < 0)
+// 	{
+// 		for(int k = 0; k < 9; ++k)
+// 			std::cout<< str[k];
+// 		std::cout<< ".";
+// 	}
+// }
+
 void	PrintRow(std::string str)
 {
-	int	diff = 10 - str.length();
-    
-    std::cout << "|";
-	if (diff >= 0)
-	{
-		for(int i = diff; i > 0; --i)
-			std::cout<<" ";
-		std::cout<<str;
-	}
-	else if (diff < 0)
-	{
-		for(int k = 0; k < 9; ++k)
-			std::cout<< str[k];
-		std::cout<< ".";
-	}
+
 }
 
 bool	IsAllDigits(std::string input)
@@ -71,7 +76,7 @@ bool	IsAllDigits(std::string input)
 	int	lenght = input.size();
 
 	if (input.empty())
-    	return false;
+		return false;
 	for (int i = 0; i < lenght; i++)
 	{
 		if (!std::isdigit(static_cast<unsigned char>(input[i])))
