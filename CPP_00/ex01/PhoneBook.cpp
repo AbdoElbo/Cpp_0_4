@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 16:07:05 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/15 19:36:58 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/04/16 17:20:54 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main(void)
 		if (std::cin.eof())
 			break ;
 		std::cout<<"Please enter one of the options: ADD/SEARCH/EXIT\n";
-		if (!std::getline(std::cin, identifer))
+		if (!std::getline(std::cin, identifer) || std::cin.eof())
 			break ;
 		if (!identifer.compare("ADD") || !identifer.compare("a"))
 		{

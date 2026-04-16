@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Helper.cpp                                         :+:      :+:    :+:   */
+/*   Options.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 23:24:39 by gekko             #+#    #+#             */
-/*   Updated: 2026/04/16 16:53:38 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/04/16 17:19:33 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,19 @@ void	AddOption(PhoneBook *phonebook, int i)
 	std::string darkest;
 
 	std::cout<<"Enter the first name: ";
-	if (!std::getline(std::cin, firstname))
+	if (!std::getline(std::cin, firstname) || std::cin.eof())
 		return ;
 	std::cout<<"Enter the last name: ";
-	if (!std::getline(std::cin, lastname))
+	if (!std::getline(std::cin, lastname) || std::cin.eof())
 		return ;
 	std::cout<<"Enter the nick_name: ";
-	if (!std::getline(std::cin, nick))
+	if (!std::getline(std::cin, nick) || std::cin.eof())
 		return ;
 	std::cout<<"Enter the phone number: ";
-	if (!std::getline(std::cin, phone))
+	if (!std::getline(std::cin, phone) || std::cin.eof())
 		return ;
 	std::cout<<"Enter the darkest secret: ";
-	if (!std::getline(std::cin, darkest))
+	if (!std::getline(std::cin, darkest) || std::cin.eof())
 		return ;
 
 	if (!firstname.length() || !lastname.length() ||
@@ -91,7 +91,7 @@ void	SearchOption(PhoneBook *phonebook)
 			std::cout<<"‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n";
 	}
 	std::cout<<"Enter the person's Index: ";
-	if (!std::getline(std::cin, input_str))
+	if (!std::getline(std::cin, input_str) || std::cin.eof())
 		return ;
 	if (!IsAllDigits(input_str))
 	{
