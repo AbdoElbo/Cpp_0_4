@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 16:54:47 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/15 19:37:03 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/04/16 17:02:13 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ class PhoneBook
 {
 	public:
 		Contact contact[MAX_CON];
-	private:
-		// static const int max_con {8};
 };
 
 void	PrintRow(std::string str);

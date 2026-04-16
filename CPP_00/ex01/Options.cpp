@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 23:24:39 by gekko             #+#    #+#             */
-/*   Updated: 2026/04/15 19:40:05 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/04/16 16:53:38 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,28 +47,13 @@ void	AddOption(PhoneBook *phonebook, int i)
 	phonebook->contact[i].SetSecret(darkest);
 }
 
-// void	PrintRow(std::string str)
-// {
-// 	int	diff = 10 - str.length();
-
-// 	std::cout << "|";
-// 	if (diff >= 0)
-// 	{
-// 		for(int i = diff; i > 0; --i)
-// 			std::cout<<" ";
-// 		std::cout<<str;
-// 	}
-// 	else if (diff < 0)
-// 	{
-// 		for(int k = 0; k < 9; ++k)
-// 			std::cout<< str[k];
-// 		std::cout<< ".";
-// 	}
-// }
-
 void	PrintRow(std::string str)
 {
-
+	std::cout << "|";
+	if (str.length() > 10)
+		std::cout << str.substr(0, 9) << "." ;
+	else
+		std::cout << std::setw(10) << str;
 }
 
 bool	IsAllDigits(std::string input)
@@ -84,6 +69,7 @@ bool	IsAllDigits(std::string input)
 	}
 	return true;
 }
+
 void	SearchOption(PhoneBook *phonebook)
 {
 	std::string	input_str;
@@ -94,7 +80,7 @@ void	SearchOption(PhoneBook *phonebook)
 	std::cout<<"|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|‾‾‾‾‾‾‾‾‾‾|\n";
 	for (int i = 0; i < MAX_CON; i++)
 	{
-		std::cout<< "|         " << phonebook->contact[i].GetIndex();
+		std::cout<< "|" << std::setw(10) << phonebook->contact[i].GetIndex();
 		PrintRow(phonebook->contact[i].GetFirst());
 		PrintRow(phonebook->contact[i].GetLast());
 		PrintRow(phonebook->contact[i].GetNick());
@@ -115,12 +101,12 @@ void	SearchOption(PhoneBook *phonebook)
 	input_num = std::stoi(input_str);
 	if (input_num < 0 || input_num >= MAX_CON)
 	{
-		std::cout<<"\nmf that's an Invalid index.\n\n";
+		std::cout<<"\nMF! that's an Invalid index.\n\n";
 		return ;
 	}
 	if (phonebook->contact[input_num].GetFirst().size() == 0)
 	{
-		std::cout<<"\nmf, it's an empty index.\n\n";
+		std::cout<<"\nMF! that's an empty index.\n\n";
 		return ;
 	}
 	std::cout <<"Firstname: " << phonebook->contact[input_num].GetFirst() << "\n";
