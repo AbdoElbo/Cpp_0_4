@@ -1,16 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   setters.cpp                                        :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 19:33:04 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/16 16:31:38 by aelbouaz         ###   ########.fr       */
+/*   Created: 2026/02/26 19:21:51 by aelbouaz          #+#    #+#             */
+/*   Updated: 2026/04/17 16:08:26 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+
+int	Contact::GetIndex(void)
+{
+	return (Index);
+}
+
+std::string	Contact::GetFirst(void)
+{
+	return (FirstName);
+}
+
+std::string	Contact::GetLast(void)
+{
+	return (LastName);
+}
+
+std::string	Contact::GetNick(void)
+{
+	return (NickName);
+}
+
+std::string	Contact::GetPhone(void)
+{
+	return (PhoneNumber);
+}
+
+std::string	Contact::GetSecret(void)
+{
+	return (DarkestSecret);
+}
 
 void	Contact::SetIndex(int number)
 {

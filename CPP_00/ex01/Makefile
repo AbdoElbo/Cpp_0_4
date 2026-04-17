@@ -6,14 +6,14 @@
 #    By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/07 16:20:34 by aelbouaz          #+#    #+#              #
-#    Updated: 2026/04/16 17:04:11 by aelbouaz         ###   ########.fr        #
+#    Updated: 2026/04/17 16:14:00 by aelbouaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++11
 
-SRCS = PhoneBook.cpp Getters.cpp Setters.cpp Options.cpp
+SRCS = main.cpp PhoneBook.cpp Contact.cpp
 
 OBJ_DIR = obj
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
@@ -25,6 +25,7 @@ RESET = \033[0m
 NAME = PhoneBook
 
 all: $(NAME)
+	@printf "$(GREEN)Executable: $(NAME)$(RESET)\n"
 
 $(NAME): $(OBJS)
 	@printf "$(GREEN)Done!$(RESET)\n"
