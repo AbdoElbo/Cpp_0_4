@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/25 16:07:08 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/22 20:36:19 by aelbouaz         ###   ########.fr       */
+/*   Created: 2026/04/20 19:16:40 by aelbouaz          #+#    #+#             */
+/*   Updated: 2026/04/22 17:34:12 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#pragma once
 
 #include <iostream>
 #include <string>
 
-int main(int ac, char **av)
+class Zombie
 {
-	int i = 1;
-	if (ac == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-		return (0);
-	}
-	while (i < ac)
-	{
-		std::string str = av[i];
-		for (int k = 0; k < static_cast<int>(str.length()); k++)
-			str[k] = static_cast<char>(toupper(str[k]));
-		std::cout << str;
-		i++;
-	}
-	std:: cout << "\n";
-	return (1);
-}
+	private:
+		std::string	name;
+	public:
+		Zombie(void);
+		~Zombie(void);
+		void 	announce(void);
+		Zombie*	newZombie( std::string name );
+		void	randomChump( std::string name );
+};
 

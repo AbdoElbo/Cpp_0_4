@@ -1,35 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/25 16:07:08 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/22 20:36:19 by aelbouaz         ###   ########.fr       */
+/*   Created: 2026/04/20 19:21:30 by aelbouaz          #+#    #+#             */
+/*   Updated: 2026/04/22 17:50:07 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "Zombie.hpp"
 
-int main(int ac, char **av)
+Zombie *Zombie::newZombie( std::string name )
 {
-	int i = 1;
-	if (ac == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-		return (0);
-	}
-	while (i < ac)
-	{
-		std::string str = av[i];
-		for (int k = 0; k < static_cast<int>(str.length()); k++)
-			str[k] = static_cast<char>(toupper(str[k]));
-		std::cout << str;
-		i++;
-	}
-	std:: cout << "\n";
-	return (1);
-}
+	Zombie *ZombieNew = new Zombie();
 
+	ZombieNew->name = name;
+	return ZombieNew;
+}

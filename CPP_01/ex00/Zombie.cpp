@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/25 16:07:08 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/22 20:36:19 by aelbouaz         ###   ########.fr       */
+/*   Created: 2026/04/20 19:21:34 by aelbouaz          #+#    #+#             */
+/*   Updated: 2026/04/22 17:37:43 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "Zombie.hpp"
 
-int main(int ac, char **av)
+Zombie::Zombie()
 {
-	int i = 1;
-	if (ac == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-		return (0);
-	}
-	while (i < ac)
-	{
-		std::string str = av[i];
-		for (int k = 0; k < static_cast<int>(str.length()); k++)
-			str[k] = static_cast<char>(toupper(str[k]));
-		std::cout << str;
-		i++;
-	}
-	std:: cout << "\n";
-	return (1);
+	std::cout << "Constructor Called" << std::endl;
 }
+
+Zombie::~Zombie()
+{
+	std::cout << "Deconstructor Called" << std::endl;
+}
+
+void	Zombie::announce(void)
+{
+	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
 
