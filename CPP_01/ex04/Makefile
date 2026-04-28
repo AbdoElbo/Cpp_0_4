@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gekko <gekko@student.42.fr>                +#+  +:+       +#+         #
+#    By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/07 16:20:34 by aelbouaz          #+#    #+#              #
-#    Updated: 2026/04/26 20:49:53 by gekko            ###   ########.fr        #
+#    Updated: 2026/04/28 16:10:53 by aelbouaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ GREEN = \033[1;32m
 BLUE = \033[1;34m
 RESET = \033[0m
 
-NAME = Replace
+NAME = REP
 
 all: $(NAME)
 	@printf "$(GREEN)Executable: $(NAME)$(RESET)\n"

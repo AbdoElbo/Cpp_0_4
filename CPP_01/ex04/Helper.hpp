@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Helper.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gekko <gekko@student.42.fr>                +#+  +:+       +#+        */
+/*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 20:47:51 by gekko             #+#    #+#             */
-/*   Updated: 2026/04/26 21:22:47 by gekko            ###   ########.fr       */
+/*   Updated: 2026/04/28 15:34:01 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@
 #include <string>
 #include <fstream>
 
-bool errorHandler(int ac, char **av);
+bool		initWithCheck(int ac, char **av, std::string &line);
+std::string	replace(std::string s1, std::string s2, std::string &line);
