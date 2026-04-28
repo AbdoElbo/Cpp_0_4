@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 20:49:32 by gekko             #+#    #+#             */
-/*   Updated: 2026/04/28 16:34:57 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/04/28 18:43:44 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,18 @@ std::string	replace(std::string s1, std::string s2, std::string &line)
 		}
 	}
 	return newLine;
+}
+
+std::string getFileName(std::string str)
+{
+	std::string fileName;
+	int	len = str.length();
+
+	for (int i = 0; i < len ; i++)
+	{
+		if (str[i] == '.')
+			break;
+		fileName.push_back(str[i]);
+	}
+	return (fileName);
 }
