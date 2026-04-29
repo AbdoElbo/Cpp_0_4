@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 10:39:17 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/24 10:52:43 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/04/24 11:13:22 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ int	main()
 	void *stringPTR = &sentence;
 	std::string &stringREF = sentence;
 
-	std::cout << "\nMemory addresses:" << std::endl;
+	// std::cout << "\nMemory addresses:" << std::endl;
 	std::cout << "String:    " << &sentence << std::endl;
 	std::cout << "Pointer:   " << &stringPTR << std::endl;
 	std::cout << "Reference: " << &stringREF << std::endl;
 
-	std::cout << "\nValues:" << std::endl;
+	// std::cout << "\nValues:" << std::endl;
 	std::cout << "String:    " << sentence << std::endl;
 	std::cout << "Pointer:   " << stringPTR << std::endl;
 	std::cout << "Reference: " << stringREF << std::endl;

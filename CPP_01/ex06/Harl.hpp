@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 19:21:34 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/29 18:18:20 by aelbouaz         ###   ########.fr       */
+/*   Created: 2026/04/29 18:53:13 by aelbouaz          #+#    #+#             */
+/*   Updated: 2026/04/29 18:53:16 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#pragma once
 
-Weapon::Weapon()
-{
-	std::cout << "DEFAULT Weapon Constructor Called" << std::endl;
-}
+#include <string>
+#include <iostream>
 
-Weapon::Weapon(std::string newType)
+class Harl
 {
-	std::cout << "Weapon Constructor Called" << std::endl;
-	type = newType;
-}
+	private:
+		void	debug(void);
+		void	info(void);
+		void	warning(void);
+		void	error(void);
+	public:
+		void	complain(std::string level);
+};
 
-Weapon::~Weapon()
-{
-	std::cout << "Weapon Destructor Called" << std::endl;
-}
+enum command {
+	DEBUG,
+	INFO,
+	WARNING,
+	ERROR
+};
 
-void	Weapon::setType(std::string newWeapon)
-{
-	type = newWeapon;
-}
-
-std::string	Weapon::getType()
-{
-	return type;
-}
+command	stringToComplaint(std::string str);

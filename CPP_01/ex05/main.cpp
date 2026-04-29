@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 19:21:34 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/29 18:18:20 by aelbouaz         ###   ########.fr       */
+/*   Created: 2026/04/28 18:59:36 by aelbouaz          #+#    #+#             */
+/*   Updated: 2026/04/29 13:01:02 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "Harl.hpp"
 
-Weapon::Weapon()
+int	main(int ac, char **av)
 {
-	std::cout << "DEFAULT Weapon Constructor Called" << std::endl;
-}
+	Harl	MaleKaren;
 
-Weapon::Weapon(std::string newType)
-{
-	std::cout << "Weapon Constructor Called" << std::endl;
-	type = newType;
-}
-
-Weapon::~Weapon()
-{
-	std::cout << "Weapon Destructor Called" << std::endl;
-}
-
-void	Weapon::setType(std::string newWeapon)
-{
-	type = newWeapon;
-}
-
-std::string	Weapon::getType()
-{
-	return type;
+	if (ac != 2)
+	{
+		std::cerr << "Please enter one of these options:" << std::endl;
+		std::cerr << "DEBUG/INFO/WARNING/ERROR" << std::endl;
+		return EXIT_FAILURE;
+	}
+	MaleKaren.complain(av[1]);
+	return EXIT_SUCCESS;
 }

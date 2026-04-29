@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gekko <gekko@student.42.fr>                +#+  +:+       +#+        */
+/*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 11:17:34 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/26 20:39:21 by gekko            ###   ########.fr       */
+/*   Updated: 2026/04/29 18:18:11 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 HumanB::HumanB(std::string name)
 {
-	// std::cout << "DEFAULT HumanB Constructor Called" << std::endl;
+	std::cout << "DEFAULT HumanB Constructor Called" << std::endl;
 	this->name = name;
 	std::cout << "HumanB's name set to " << name << std::endl;
 }
 
 HumanB::HumanB(std::string name, Weapon *weaponType)
 {
-	// std::cout << "HumanB Constructor Called" << std::endl;
+	std::cout << "HumanB Constructor Called" << std::endl;
 	this->name = name;
 	this->weapon = weaponType;
 	std::cout << "HumanB's name set to " << name << " and they have a " << weapon->getType() << std::endl;
@@ -30,7 +30,7 @@ HumanB::HumanB(std::string name, Weapon *weaponType)
 
 HumanB::~HumanB()
 {
-	// std::cout << "HumanB Destructor Called" << std::endl;
+	std::cout << "HumanB Destructor Called" << std::endl;
 }
 
 std::string HumanB::getNameB()

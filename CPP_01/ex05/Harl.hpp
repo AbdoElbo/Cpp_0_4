@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 19:16:40 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/29 18:54:07 by aelbouaz         ###   ########.fr       */
+/*   Created: 2026/04/29 18:53:25 by aelbouaz          #+#    #+#             */
+/*   Updated: 2026/04/29 18:53:27 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
 #include <string>
+#include <iostream>
 
-class Weapon
+class Harl
 {
 	private:
-		std::string	type;
+		void	debug(void);
+		void	info(void);
+		void	warning(void);
+		void	error(void);
 	public:
-		Weapon();
-		Weapon(std::string newType);
-		~Weapon();
-		std::string	getType();
-		void		setType(std::string newWeapon);
-	};
+		void	complain(std::string level);
+};
+
+void	printAsciiArt(void);

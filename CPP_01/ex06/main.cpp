@@ -5,23 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 19:21:28 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/29 18:54:26 by aelbouaz         ###   ########.fr       */
+/*   Created: 2026/04/28 18:59:36 by aelbouaz          #+#    #+#             */
+/*   Updated: 2026/04/29 18:38:19 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Harl.hpp"
 
-int main()
+int	main(int ac, char **av)
 {
-	Zombie *zombie1;
+	Harl	MaleKaren;
+	std::string lvl;
 
-	zombie1 = newZombie("Pickle Rick");
-	std::cout << "\nUgh Morty, how many times should i remind you" << std::endl;
-	std::cout << "my name's not Rick, it's " << zombie1->getName() << std::endl;
-	std::cout << std::endl;
-	randomChump("Morty");
-	delete zombie1;
-	return (EXIT_SUCCESS);
-};
-
+	if (ac != 2)
+	{
+		std::cerr << "Please enter one of these options:" << std::endl;
+		std::cerr << "DEBUG/INFO/WARNING/ERROR" << std::endl;
+		return EXIT_FAILURE;
+	}
+	lvl = av[1];
+	if(lvl != "DEBUG" && lvl != "INFO"
+		&& lvl != "WARNING" && lvl != "ERROR")
+	{
+		std::cerr << "Please enter one of these options:" << std::endl;
+		std::cerr << "DEBUG/INFO/WARNING/ERROR" << std::endl;
+		return EXIT_FAILURE;;
+	}
+	MaleKaren.complain(av[1]);
+	return EXIT_SUCCESS;
+}

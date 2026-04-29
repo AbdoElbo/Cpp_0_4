@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gekko <gekko@student.42.fr>                +#+  +:+       +#+        */
+/*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 19:21:32 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/26 20:38:34 by gekko            ###   ########.fr       */
+/*   Updated: 2026/04/29 18:18:15 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 HumanA::HumanA()
 {
-	// std::cout << "DEFAULT HumanA Constructor Called" << std::endl;
+	std::cout << "DEFAULT HumanA Constructor Called" << std::endl;
 }
 
 HumanA::HumanA(std::string name, Weapon *weaponType)
 {
-	// std::cout << "HumanB Constructor Called" << std::endl;
+	std::cout << "HumanB Constructor Called" << std::endl;
 	this->name = name;
 	this->weapon = weaponType;
 	std::cout << "HumanA's name set to " << name << " and they have a " << weapon->getType() << std::endl;
@@ -27,7 +27,7 @@ HumanA::HumanA(std::string name, Weapon *weaponType)
 
 HumanA::~HumanA()
 {
-	// std::cout << "HumanA Destructor Called" << std::endl;
+	std::cout << "HumanA Destructor Called" << std::endl;
 }
 
 std::string HumanA::getNameA()

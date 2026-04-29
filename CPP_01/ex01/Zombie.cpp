@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 19:21:34 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/23 13:52:39 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/04/24 11:10:37 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ void	Zombie::announce()
 
 void	Zombie::setName(std::string newName)
 {
+	// static int count;
+
+	// std::string result = newName + std::to_string(count);
+	// count++;
+	// name = result;
 	name = newName;
 }
 
