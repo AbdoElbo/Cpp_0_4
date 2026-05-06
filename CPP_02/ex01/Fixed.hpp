@@ -1,24 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 19:21:28 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/29 18:58:31 by aelbouaz         ###   ########.fr       */
+/*   Created: 2026/04/29 18:53:13 by aelbouaz          #+#    #+#             */
+/*   Updated: 2026/05/05 12:58:29 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
-int main()
+#include <string>
+#include <iostream>
+#include <cmath>
+
+class Fixed
 {
-	int Number = 5;
-	Zombie *arr = zombieHorde(Number, "Mr. Meeseeks");
-	for (int i = 0; i < Number; i++)
-		arr[i].announce();
-	delete[] arr;
-	return (EXIT_SUCCESS);
-}
+	private:
+		int					integer;
+		static const int	cstInt = 8;
+	public:
+		Fixed();
+		Fixed(int num);
+		Fixed(float num);
+		Fixed(const Fixed& other);
+		Fixed& operator=(const Fixed& other);
+		~Fixed();
+		int getRawBits(void) const;
+		void setRawBits(int const raw);
+		float Fixed::toFloat() const;
+		int Fixed::toInt() const;
+};
+
 

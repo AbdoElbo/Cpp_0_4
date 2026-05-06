@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 19:16:40 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/29 18:54:07 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/06 14:05:51 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ class Weapon
 		Weapon();
 		Weapon(std::string newType);
 		~Weapon();
-		std::string	getType();
-		void		setType(std::string newWeapon);
+		const std::string&	getType();
+		void				setType(std::string newWeapon);
 	};

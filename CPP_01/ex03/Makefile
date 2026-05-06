@@ -6,7 +6,7 @@
 #    By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/07 16:20:34 by aelbouaz          #+#    #+#              #
-#    Updated: 2026/04/24 11:17:27 by aelbouaz         ###   ########.fr        #
+#    Updated: 2026/04/29 19:00:14 by aelbouaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ GREEN = \033[1;32m
 BLUE = \033[1;34m
 RESET = \033[0m
 
-NAME = Zombie
+NAME = Fight
 
 all: $(NAME)
 	@printf "$(GREEN)Executable: $(NAME)$(RESET)\n"

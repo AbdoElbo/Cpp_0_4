@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gekko <gekko@student.42.fr>                +#+  +:+       +#+        */
+/*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 19:21:28 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/26 20:39:30 by gekko            ###   ########.fr       */
+/*   Updated: 2026/05/06 13:36:07 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main()
 	{
 	Weapon club = Weapon("Wooden sword");
 	HumanB jim("Jim");
-	jim.setWeapon(&club);
+	// jim.setWeapon(&club);
 	jim.attack();
 	club.setType("Excalibur");
 	jim.attack();

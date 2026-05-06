@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 11:17:34 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/29 18:18:11 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/06 14:16:39 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ HumanB::HumanB(std::string name)
 {
 	std::cout << "DEFAULT HumanB Constructor Called" << std::endl;
 	this->name = name;
+	this->weapon = nullptr;
 	std::cout << "HumanB's name set to " << name << std::endl;
 }
 
@@ -46,10 +47,13 @@ void	HumanB::setNameB(std::string newName)
 void	HumanB::setWeapon(Weapon *newWeapon)
 {
 	weapon = newWeapon;
-	// weapon.setType(newWeapon.getType());
 }
 
 void	HumanB::attack()
 {
-	std::cout << name << " attacks with their " << weapon->getType() << std::endl;
+	if (weapon)
+		std::cout << name << " attacks with their " << weapon->getType() << std::endl;
+	else
+		std::cout << name << " Doesn't have a weapon!! (HE DEAD)" << std::endl;
+
 }

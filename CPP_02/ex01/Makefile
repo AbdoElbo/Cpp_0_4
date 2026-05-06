@@ -6,14 +6,14 @@
 #    By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/07 16:20:34 by aelbouaz          #+#    #+#              #
-#    Updated: 2026/04/29 19:02:08 by aelbouaz         ###   ########.fr        #
+#    Updated: 2026/05/04 17:56:42 by aelbouaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror
 
-SRCS = main.cpp Helper.cpp
+SRCS = main.cpp Fixed.cpp
 
 OBJ_DIR = obj
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
@@ -22,7 +22,7 @@ GREEN = \033[1;32m
 BLUE = \033[1;34m
 RESET = \033[0m
 
-NAME = rep
+NAME = Fixed
 
 all: $(NAME)
 	@printf "$(GREEN)Executable: $(NAME)$(RESET)\n"

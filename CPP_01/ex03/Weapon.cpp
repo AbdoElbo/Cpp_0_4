@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 19:21:34 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/29 18:18:20 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/06 14:16:43 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	Weapon::setType(std::string newWeapon)
 	type = newWeapon;
 }
 
-std::string	Weapon::getType()
+const std::string&	Weapon::getType()
 {
 	return type;
 }
