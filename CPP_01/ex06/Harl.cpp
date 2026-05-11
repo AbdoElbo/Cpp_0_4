@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 18:52:37 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/04/29 18:52:02 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/11 15:20:33 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,29 +62,18 @@ void	Harl::complain(std::string level)
 	switch (cmd)
 	{
 		case DEBUG:
-		{
-			for (int i = 0; i < 4; i++)
-				(this->*funcs[i])();
-			break ;
-		}
+			(this->*funcs[0])();
 		case INFO:
-		{
-			for (int i = 1; i < 4; i++)
-				(this->*funcs[i])();
-			break ;
-		}
+			(this->*funcs[1])();
 		case WARNING:
-		{
-			for (int i = 2; i < 4; i++)
-				(this->*funcs[i])();
-			break ;
-		}
+			(this->*funcs[2])();
 		case ERROR:
 		{
-			for (int i = 3; i < 4; i++)
-				(this->*funcs[i])();
+			(this->*funcs[3])();
 			break ;
 		}
+		default:
+			std::cout << "NO COMPALIN AVAILABLE, (Harl is satisfied somehow)!" << std::endl;
 	}
 }
 
