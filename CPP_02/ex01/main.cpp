@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 19:21:28 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/05 12:55:16 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/12 18:57:52 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,20 @@ int	main()
 
 	a = Fixed( 1234.4321f );
 
+	std::cout << std::endl;
+
 	std::cout << "a is " << a << std::endl;
 	std::cout << "b is " << b << std::endl;
 	std::cout << "c is " << c << std::endl;
 	std::cout << "d is " << d << std::endl;
 
+	std::cout << std::endl;
 	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
 	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
 	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
 	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+
+	std::cout << std::endl;
 
 	std::cout << "a is " << a.toFloat() << " as Float" << std::endl;
 	std::cout << "b is " << b.toFloat() << " as Float" << std::endl;
@@ -38,4 +43,3 @@ int	main()
 
 	return EXIT_SUCCESS;
 }
-

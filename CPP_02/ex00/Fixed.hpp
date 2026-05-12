@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 18:53:13 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/04 14:35:01 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/12 12:25:39 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Fixed
 {
 	private:
-		int					integer;
+		int					num;
 		static const int	cstInt = 8;
 	public:
 		Fixed();
