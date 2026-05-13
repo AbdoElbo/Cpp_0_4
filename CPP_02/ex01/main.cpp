@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 19:21:28 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/12 18:57:52 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/13 15:03:30 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main()
 	Fixed	const c(42.42f);
 	Fixed	const d(b);
 
-	a = Fixed( 1234.4321f );
+	a = Fixed(1234.4321f);
 
 	std::cout << std::endl;
 
@@ -41,5 +41,6 @@ int	main()
 	std::cout << "c is " << c.toFloat() << " as Float" << std::endl;
 	std::cout << "d is " << d.toFloat() << " as Float" << std::endl;
 
+	std::cout << std::endl;
 	return EXIT_SUCCESS;
 }
