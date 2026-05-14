@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 18:52:37 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/14 12:20:20 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/14 13:57:42 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,9 @@ Fixed::Fixed() : num(0)
 	// std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(const int num)
+Fixed::~Fixed()
 {
-	// std::cout << "Int constructor called" << std::endl;
-	this->num = num * 256;
-}
-
-Fixed::Fixed(const float num)
-{
-	// std::cout << "Float constructor called" << std::endl;
-	this->num = roundf(num * 256.0f);
+	// std::cout << "Destructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed& other)
@@ -43,15 +36,22 @@ Fixed& Fixed::operator=(const Fixed& other)
 	return *this;
 }
 
+Fixed::Fixed(const int num)
+{
+	// std::cout << "Int constructor called" << std::endl;
+	this->num = num * 256;
+}
+
+Fixed::Fixed(const float num)
+{
+	// std::cout << "Float constructor called" << std::endl;
+	this->num = roundf(num * 256.0f);
+}
+
 std::ostream& operator<<(std::ostream& os, const Fixed& other)
 {
 	os << other.toFloat();
 	return os;
-}
-
-Fixed::~Fixed()
-{
-	// std::cout << "Destructor called" << std::endl;
 }
 
 int Fixed::getRawBits() const
