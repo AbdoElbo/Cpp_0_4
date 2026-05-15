@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 19:21:28 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/15 17:56:07 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/14 19:47:14 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int main(void)
 	std::cout << std::endl;
 
 	for (int i = 0; i < 9; i++)
-		Fighter1.attack("Ken");
+		Fighter1.attack("Guile");
 	Fighter1.beRepaired(50);
-	Fighter1.attack("Ken");
+	Fighter1.attack("Guile");
 	Fighter1.beRepaired(4);
 
 

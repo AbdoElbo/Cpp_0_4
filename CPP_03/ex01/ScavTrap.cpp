@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 19:21:28 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/15 15:31:14 by aelbouaz         ###   ########.fr       */
+/*   Created: 2026/05/15 17:57:06 by aelbouaz          #+#    #+#             */
+/*   Updated: 2026/05/15 18:00:50 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Point.hpp"
+#include "ScavTrap.hpp"
 
-int main(void)
+ScavTrap::ScavTrap()
 {
-	Point a(4, 3);
-	Point b(1, 1);
-	Point c(2, 6);
-	Point p(2, 1.67);
 
-	if (bsp(a, b, c, p))
-		std::cout <<BG<< "Point P is in the Triangle ABC" <<RESET<< std::endl;
-	else
-		std::cout <<BR<< "Point P is NOTTTT in the Triangle ABC" <<RESET<< std::endl;
-	return EXIT_SUCCESS;
+}
+
+ScavTrap::ScavTrap(std::string name): health(100), energy(50), damage(20)
+{
+	
+}
+
+ScavTrap::~ScavTrap()
+{
+
+}
+
+ScavTrap::ScavTrap(const ScavTrap& other)
+{
+
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& other)
+{
+
 }

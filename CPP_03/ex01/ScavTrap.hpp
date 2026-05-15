@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Point.hpp                                          :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/14 12:25:59 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/15 15:31:22 by aelbouaz         ###   ########.fr       */
+/*   Created: 2026/05/15 17:56:53 by aelbouaz          #+#    #+#             */
+/*   Updated: 2026/05/15 18:01:26 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Fixed.hpp"
+#include "ClapTrap.hpp"
 
-#define BG "\033[1;32m" // bold green
-#define BR "\033[1;31m" // bold red
-#define RESET "\033[0m" // RESET DUH
-
-class Point
+class ScavTrap
 {
 	private:
-		const Fixed x;
-		const Fixed y;
+		std::string	name;
+		int			health;
+		int			energy;
+		int			damage;
 	public:
-		Point();
-		Point(const float a, const float b);
-		Point(const Point& other);
-		Point& operator=(const Point& other);
-		~Point();
-		Fixed getX() const;
-		Fixed getY() const;
-};
+		ScavTrap();
+		ScavTrap(std::string name);
+		ScavTrap(const ScavTrap& other);
+		ScavTrap& operator=(const ScavTrap& other);
+		~ScavTrap();
 
-bool bsp(Point const a, Point const b, Point const c, Point const point);
+};
