@@ -6,31 +6,35 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 17:46:25 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/15 17:58:46 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/20 18:24:39 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(): health(10), energy(10), damage(0)
+ClapTrap::ClapTrap(): name("Unkonwn"), health(10), energy(10), damage(0)
 {
-	std::cout << "Default Constructor Called!" << std::endl;
-	this->name = "UNKOWN";
+	std::cout <<BG<< "DEFAULT Constructor Called!(++ClapTrap++)" <<RESET<< std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name): health(10), energy(10), damage(0)
+ClapTrap::ClapTrap(std::string name): name(name), health(10), energy(10), damage(0)
 {
-	std::cout <<BG<< "Costum Constructor Called!" <<RESET<< std::endl;
-	this->name = name;
+	std::cout <<BG<< "Constructor Called!(++ClapTrap++)" <<RESET<< std::endl;
+}
+
+ClapTrap::ClapTrap(std::string name, int hp, int nrg, int dmg): name(name), health(hp), energy(nrg), damage(dmg)
+{
+	std::cout <<BG<< "Constructor Called!(++ClapTrap++)" <<RESET<< std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout <<BR<< "Destructor for " << this->name <<" Called!" <<RESET<< std::endl;
+	std::cout <<BR<< "Destructor for " << this->name <<" Called!(++ClapTrap++)" <<RESET<< std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other)
 {
+	std::cout <<BG<< "Copy-Constructor Called! (++ClapTrap++)" <<RESET<< std::endl;
 	this->name = other.name;
 	this->energy = other.energy;
 	this->health = other.health;
@@ -39,10 +43,14 @@ ClapTrap::ClapTrap(const ClapTrap& other)
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
-	this->name = other.name;
-	this->energy = other.energy;
-	this->health = other.health;
-	this->damage = other.damage;
+	std::cout <<BG<< "Copy-Assignement Called! (++ClapTrap++)" <<RESET<< std::endl;
+	if (this != &other)
+	{
+		this->name = other.name;
+		this->energy = other.energy;
+		this->health = other.health;
+		this->damage = other.damage;
+	}
 	return *this;
 }
 
@@ -103,5 +111,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 
 void ClapTrap::getInfo()
 {
-	std::cout <<GW<< name << " has : " << health << " HP, " << energy << " energy pts." <<RESET<< std::endl;
+	std::cout <<GW<< name << " has : " << health << " HP, " << energy << " NRG pts and " << this->damage << " DMG pts." <<RESET<< std::endl;
 }
+
+

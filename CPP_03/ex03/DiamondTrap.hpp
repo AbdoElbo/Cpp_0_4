@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/15 17:56:53 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/20 15:43:23 by aelbouaz         ###   ########.fr       */
+/*   Created: 2026/05/20 13:45:51 by aelbouaz          #+#    #+#             */
+/*   Updated: 2026/05/20 18:36:12 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
-class ScavTrap: public virtual ClapTrap
+class DiamondTrap:public ScavTrap, public FragTrap
 {
 	private:
-	public:
-		ScavTrap();
-		ScavTrap(std::string name);
-		ScavTrap(const ScavTrap& other);
-		ScavTrap& operator=(const ScavTrap& other);
-		void guardGate();
-		~ScavTrap();
-};
 
+	public:
+		DiamondTrap(std::string name);
+		DiamondTrap(std::string name, int hp, int nrg, int dmg);
+		DiamondTrap(const DiamondTrap& other);
+		DiamondTrap& operator=(const DiamondTrap& other);
+		~DiamondTrap();
+		void whoAmI();
+};

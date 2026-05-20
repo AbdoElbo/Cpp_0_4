@@ -6,38 +6,26 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 19:21:28 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/20 13:25:01 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/20 18:37:39 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main(void)
 {
-	ScavTrap Fighter1("Me");
-	ScavTrap Fighter2("lol");
+	DiamondTrap monster("Frankenstein");
 
 	std::cout << std::endl;
-
-	// Fighter2 = Fighter1;
-
-	Fighter1.getInfo();
-	Fighter2.getInfo();
-
-	std::cout << std::endl;
-	Fighter2.guardGate();
+	monster.getInfo();
 	std::cout << std::endl;
 
-	Fighter1.attack("Peter");
-	Fighter2.attack("Peter");
-	// for (int i = 0; i < 51; i++)
-	// 	Fighter2.attack("Peter");
+	monster.attack("whatever");
 
 	std::cout << std::endl;
-
-	Fighter1.getInfo();
-	Fighter2.getInfo();
-
+	monster.getInfo();
 	std::cout << std::endl;
+
+	monster.whoAmI();
 	return EXIT_SUCCESS;
 }
