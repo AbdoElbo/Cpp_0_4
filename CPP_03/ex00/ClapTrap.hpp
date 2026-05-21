@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 17:46:17 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/21 15:47:38 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/21 16:03:28 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 
 class ClapTrap
 {
-	protected:
+	private:
 		std::string	name;
 		int			health;
 		int			energy;
