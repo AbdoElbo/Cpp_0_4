@@ -6,17 +6,18 @@
 #    By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/07 16:20:34 by aelbouaz          #+#    #+#              #
-#    Updated: 2026/05/20 18:41:00 by aelbouaz         ###   ########.fr        #
+#    Updated: 2026/05/21 15:18:26 by aelbouaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CPP = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++11
+CPPFLAGS = -Wall -Wextra -Werror -MMD -std=c++11
 
 SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 OBJ_DIR = obj
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
+DEPS = ${OBJS:.o=.d}
 
 GREEN = \033[1;32m
 BLUE = \033[1;34m
@@ -44,5 +45,7 @@ fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
+
+-include $(DEPS)
 
 .PHONY: all clean fclean re

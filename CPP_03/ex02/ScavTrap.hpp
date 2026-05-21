@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 17:56:53 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/20 15:43:23 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/21 15:47:31 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,8 @@ class ScavTrap: public virtual ClapTrap
 		ScavTrap& operator=(const ScavTrap& other);
 		void guardGate();
 		~ScavTrap();
+		const static int init_hp = 100;
+		const static int init_nrg = 50;
+		const static int init_dmg = 20;
 };
 

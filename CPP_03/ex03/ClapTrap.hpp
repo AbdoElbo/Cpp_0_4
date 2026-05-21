@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 17:46:17 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/20 18:24:46 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/21 15:47:38 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,7 @@ class ClapTrap
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 		void getInfo();
+		const static int init_hp = 10;
+		const static int init_nrg = 10;
+		const static int init_dmg = 0;
 };

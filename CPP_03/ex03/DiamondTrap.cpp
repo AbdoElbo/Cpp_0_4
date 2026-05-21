@@ -6,20 +6,25 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 13:45:19 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/20 18:39:07 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/21 15:54:32 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(std::string name): ClapTrap(name , 100, 50, 30), ScavTrap(name), FragTrap(name)
+DiamondTrap::DiamondTrap(): ClapTrap("UNKOWN" , FragTrap::init_hp, ScavTrap::init_nrg, FragTrap::init_dmg), ScavTrap(name), FragTrap(name)
 {
 	std::cout <<BG<< "DEFAULT Constructor Called! (##DiamondTrap##)" <<RESET<< std::endl;
 }
 
+DiamondTrap::DiamondTrap(std::string name): ClapTrap(name , FragTrap::init_hp, ScavTrap::init_nrg, FragTrap::init_dmg), ScavTrap(name), FragTrap(name)
+{
+	std::cout <<BG<< "Constructor Called! (##DiamondTrap##)" <<RESET<< std::endl;
+}
+
 DiamondTrap::DiamondTrap(std::string name, int hp, int nrg, int dmg): ClapTrap(name, hp, nrg, dmg), ScavTrap(name), FragTrap(name)
 {
-	std::cout << BG << "Costum Constructor Called! (##DiamondTrap##)" << RESET << std::endl;
+	std::cout <<BG<< "Costum Constructor Called! (##DiamondTrap##)" << RESET << std::endl;
 }
 
 DiamondTrap::~DiamondTrap()

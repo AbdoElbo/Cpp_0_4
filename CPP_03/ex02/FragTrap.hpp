@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 17:56:53 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/20 15:44:12 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/21 15:47:25 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,8 @@ class FragTrap: public virtual ClapTrap
 		FragTrap& operator=(const FragTrap& other);
 		void highFivesGuys();
 		~FragTrap();
+		const static int init_hp = 100;
+		const static int init_nrg = 100;
+		const static int init_dmg = 30;
 };
 
