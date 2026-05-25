@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 17:46:17 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/21 16:03:28 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/25 18:37:21 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ class ClapTrap
 		int			energy;
 		int			damage;
 	public:
-		ClapTrap();
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap& other);
 		ClapTrap(std::string name, int hp, int nrg, int dmg);

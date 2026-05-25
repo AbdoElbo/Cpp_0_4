@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 19:21:28 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/20 13:25:01 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/25 18:40:59 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int main(void)
 {
-	ScavTrap Fighter1("Me");
-	ScavTrap Fighter2("lol");
+	ScavTrap Fighter1("(• ε •)");
+	ScavTrap Fighter2("ಥ ͜ʖ ಥ");
 
 	std::cout << std::endl;
 

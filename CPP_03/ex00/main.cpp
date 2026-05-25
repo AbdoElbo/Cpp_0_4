@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 19:21:28 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/15 17:56:07 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/25 18:39:03 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int main(void)
 	std::cout << std::endl;
 
 	Fighter2.beRepaired(4);
+	Fighter2.beRepaired(10);
 	std::cout << std::endl;
 
 	Fighter1.getInfo();

@@ -6,16 +6,11 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 17:57:06 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/21 15:52:04 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/25 16:41:35 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
-
-FragTrap::FragTrap(): ClapTrap("Unkown", FragTrap::init_hp, FragTrap::init_nrg, FragTrap::init_dmg)
-{
-	std::cout <<BG<< "DEFAULT Constructor Called! ($$FragTrap$$)" <<RESET<< std::endl;
-}
 
 FragTrap::FragTrap(std::string name): ClapTrap(name, FragTrap::init_hp, FragTrap::init_nrg, FragTrap::init_dmg)
 {

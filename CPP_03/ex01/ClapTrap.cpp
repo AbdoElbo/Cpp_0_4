@@ -6,16 +6,11 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 17:46:25 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/21 15:56:15 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/25 16:39:45 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-
-ClapTrap::ClapTrap(): name("Unkonwn"), health(init_hp), energy(init_nrg), damage(init_dmg)
-{
-	std::cout <<BG<< "DEFAULT Constructor Called!(++ClapTrap++)" <<RESET<< std::endl;
-}
 
 ClapTrap::ClapTrap(std::string name): name(name), health(init_hp), energy(init_nrg), damage(init_dmg)
 {

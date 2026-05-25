@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 17:56:53 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/21 15:47:31 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/25 16:40:18 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ class ScavTrap: public virtual ClapTrap
 {
 	private:
 	public:
-		ScavTrap();
 		ScavTrap(std::string name);
 		ScavTrap(const ScavTrap& other);
 		ScavTrap& operator=(const ScavTrap& other);
