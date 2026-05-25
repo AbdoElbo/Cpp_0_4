@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 13:45:19 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/25 18:36:31 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/25 18:58:42 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_trap", FragTrap::init_hp, ScavTrap::init_nrg, FragTrap::init_dmg), ScavTrap(name), FragTrap(name)
 {
-	this->d_name = name;
+	this->name = name;
 	std::cout <<BG<< "Constructor Called! (##DiamondTrap##)" <<RESET<< std::endl;
 }
 
@@ -37,6 +37,6 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
 
 void DiamondTrap::whoAmI()
 {
-	std::cout << "My Claptrap name: " << name << std::endl;
-	std::cout << "My Actual name  : " << this->d_name << std::endl;
+	std::cout << "My Claptrap name: " << ClapTrap::name << std::endl;
+	std::cout << "My Actual name  : " << this->name << std::endl;
 }
