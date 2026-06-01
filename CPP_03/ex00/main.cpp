@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 19:21:28 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/05/25 18:39:03 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/05/26 15:02:04 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int main(void)
 	Fighter1.takeDamage(5);
 	Fighter2.takeDamage(5);
 	Fighter1.takeDamage(5);
+	Fighter1.takeDamage(1);
 
 	std::cout << std::endl;
 
