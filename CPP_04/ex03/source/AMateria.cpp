@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 15:41:10 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/06/01 17:30:44 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/06/02 15:04:26 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,8 @@ std::string const& AMateria::getType() const
 
 void AMateria::use(ICharacter& target)
 {
-	
+	(void)target;
+	std::cout<< "this function should be used by using ice or cure" <<std::endl;
+	std::cout<< "(a.k.a it should be overriden)" <<std::endl;
+	// the Class AMateria is an abstract class, so it will never use this..
 }

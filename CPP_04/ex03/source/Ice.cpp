@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 17:32:59 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/06/01 18:01:35 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/06/02 13:57:07 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void Ice::use(ICharacter& target)
 
 AMateria* Ice::clone()
 {
-	AMateria *NewMateria = new Ice();
+	// AMateria *NewMateria = new Ice();
 
-	return NewMateria;
+	// return NewMateria;
 }

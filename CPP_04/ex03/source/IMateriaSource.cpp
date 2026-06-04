@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 17:14:40 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/06/01 17:14:46 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/06/02 15:05:15 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,11 @@ IMateriaSource::~IMateriaSource()
 
 IMateriaSource::IMateriaSource(const IMateriaSource& other)
 {
-
+	(void)other;
 }
 
 IMateriaSource& IMateriaSource::operator=(const IMateriaSource& other)
 {
-
+	(void)other;
+	return *this;
 }

@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 15:39:41 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/06/01 17:56:04 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/06/02 15:07:07 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 #include "Color.hpp"
 #include "AMateria.hpp"
 
+#define MAX_SLOTS 4
+
 class ICharacter
 {
 	private:
 		std::string name;
-		std::string slots[4];
+		std::string slots[MAX_SLOTS];
 	public:
 		ICharacter();
 		ICharacter(const ICharacter& other);

@@ -6,7 +6,7 @@
 /*   By: aelbouaz <aelbouaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 15:42:21 by aelbouaz          #+#    #+#             */
-/*   Updated: 2026/06/01 17:58:08 by aelbouaz         ###   ########.fr       */
+/*   Updated: 2026/06/02 15:02:34 by aelbouaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 ICharacter::ICharacter()
 {
 	std::cout <<BG<< "DEFAULT Constructor Called!(ICharacter)" <<RESET<< std::endl;
+	for(int i = 0; i< MAX_SLOTS; i++)
+		this->slots[i] = "EMPTY";
 }
 
 ICharacter::~ICharacter()
